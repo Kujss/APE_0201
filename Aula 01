@@ -1,0 +1,25 @@
+Aula01.c
+#include<stdio.h>
+#include<locale.h>
+
+int main() {
+	setlocale(LC_ALL, "portuguese");
+	
+	int num_1 = 13;
+	int num_2 = 7;
+	int num_3 = 12;
+	int num_4 = 70;
+	
+	float num_5 = 2.9;
+	
+	double num_6 = 390.59;
+	
+	int idade;
+	
+	printf("O valor da primeira variável é: %d dinheiros, já na segunda: %d dinheiros, porém a quarta variável tem: %d, e a terceira: %d", num_1, num_2, num_4, num_3);
+	printf ("\n O saldo devedor da sua conta para o usuário SERASA é: R$%.2f", num_5);
+	printf ("\n O valor devedor da sua conta para o usuário CLONARCARTÃOONLINE é: R$%.2lf", num_6);
+	printf ("\n\n Qual a sua idade? ");
+	scanf ("%d", &idade);
+	printf ("\n Você nasceu a %d anos atrás! Parabéns, você ainda não morreu!", idade);
+}
