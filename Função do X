@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+
+  int x;
+
+  printf("Diga um valor para X: ");
+  scanf("%d", &x);
+
+  int cima;
+
+  cima = 5 * x + 3;
+
+  printf("Divisor: %d\n", cima);
+
+  int baixo;
+
+  baixo = x * x - 16;
+
+  printf("\nDividendo: %d\n", baixo);
+
+  int raiz;
+
+  raiz = baixo / baixo;
+
+  printf("\nRaiz: %d\n", raiz);
+
+  int funcao;
+
+  funcao = cima / baixo;
+
+  printf("\nFunção: %d", funcao);
+
+  
+  
+}
