@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <math.h>
+
+  //A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número de filhos. A prefeitura deseja saber:  
+
+  //a) média do salário da população;
+
+  //b) média do número de filhos;
+
+  //c) maior salário;
+
+  //d) percentual de pessoas com salário até R$100,00.
+
+  //O final da leitura de dados se dará com a entrada de um salário negativo. (Use o comando do - while) .
+
+int main() {
+    float salario, media_salario = 0, media_filhos = 0, maior_salario = 0;
+    int habitantes = 0, salario100 = 0;
+    int filhos, total_filhos = 0;
+
+    while (1) {
+        printf("Digite o salário do habitante (ou um valor negativo para encerrar): ");
+        scanf("%f", &salario);
+
+        if (salario < 0) {
+            break;
+        }
+
+        printf("Digite o número de filhos do habitante: ");
+        scanf("%d", &filhos);
+
+        habitantes++;
+        total_filhos += filhos;
+        media_salario += salario;
+
+        if (salario <= 100) {
+            salario100++;
+        }
+
+        if (salario > maior_salario) {
+            maior_salario = salario;
+        }
+    }
+
+    if (habitantes > 0) {
+        media_salario /= habitantes;
+        media_filhos = (float)total_filhos / habitantes;
+
+        printf("\n=== Estatísticas da População ===\n");
+        printf("Média do salário: %.2f\n", media_salario);
+        printf("Média do número de filhos: %.2f\n", media_filhos);
+        printf("Maior salário: %.2f\n", maior_salario);
+        printf("Percentual de pessoas com salário até R$100.00: %.2f%%\n", (float)salario100 / habitantes * 100);
+    } else {
+        printf("Nenhum dado foi inserido.\n");
+    }
+
+
+
+}
+
+
+    
