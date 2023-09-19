@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <math.h>
+
+  //Faça um algoritmo que leia as três notas de 30 alunos de uma turma. Para cada aluno, calcule a média ponderada, como segue: MP = ( n1*2 + n2*4 + n3*3 ) / 10
+
+  //Além disso, calcule a média geral da turma. Mostre a média de cada aluno e uma mensagem "Aprovado", caso a média seja maior ou igual a sete, e uma mensagem "Reprovado", caso contrário. Ao final, mostre a média geral.
+
+    float calculo(float n1, float n2, float n3) {
+    return (n1 * 2 + n2 * 4 + n3 * 3) / 10.0;
+}
+
+int main() {
+    int alunos = 30;
+    float media_geral = 0.0;
+
+    printf("=== Resultados ===\n");
+
+    for (int i = 1; i <= alunos; i++) {
+        float n1, n2, n3;
+
+        printf("Digite as notas do aluno %d (n1 n2 n3): ", i);
+        scanf("%f %f %f", &n1, &n2, &n3);
+
+        float media = calculo(n1, n2, n3);
+        media_geral += media;
+
+        printf("Aluno %d: Média Ponderada = %.2f - %s\n", i, media, (media >= 7.0) ? "Aprovado" : "Reprovado");
+    }
+
+    media_geral /= alunos;
+
+    printf("\nMédia Geral da Turma: %.2f\n", media_geral);
+
+
+
+  
+}
+
+  
+  
+
